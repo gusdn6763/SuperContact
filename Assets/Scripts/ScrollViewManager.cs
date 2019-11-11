@@ -62,6 +62,7 @@ public class ScrollViewManager : ViewManager, ICell
             if (isEditable)
             {
                 leftNavgationViewButton.SetTitle("Complete");
+                rightNavgationViewButton.SetInteractable(false);
                 foreach (Cell cell in cellList)
                 {
                     cell.ActiveDelete = true;
@@ -70,6 +71,7 @@ public class ScrollViewManager : ViewManager, ICell
             else
             {
                 leftNavgationViewButton.SetTitle("Delete");
+                rightNavgationViewButton.SetInteractable(true);
                 foreach (Cell cell in cellList)
                 {
                     cell.ActiveDelete = false;
