@@ -163,6 +163,7 @@ MonoBehaviour:
   phoneNumberInputField: {fileID: 3019625017056890982}
   emailInputField: {fileID: 1399642456763261407}
   saveButton: {fileID: 1697692653100115398}
+  profilePhotoImageButton: {fileID: 288505120811831133}
 --- !u!95 &1866633052749566467
 Animator:
   serializedVersion: 3
@@ -194,8 +195,9 @@ GameObject:
   - component: {fileID: 7787837117031967921}
   - component: {fileID: 6195422640854263901}
   - component: {fileID: 6828422686148542028}
+  - component: {fileID: 288505120811831133}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ImageButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -297,9 +299,35 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6195422640854263901}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 288505120811831133}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &288505120811831133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395466872565911850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8282c7e488f4ba4e831e20bb6bf3125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonImage: {fileID: 4615644940875216001}
+  addPhotoPopupViewPrefab: {fileID: 4093587450579236137, guid: acd572a37dc67014eb2f1f27c4174da9,
+    type: 3}
 --- !u!1 &1462601769050953835
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,7 +692,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: be9292a722ab1a846826202709c53797, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
