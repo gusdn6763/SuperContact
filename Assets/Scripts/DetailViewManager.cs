@@ -30,7 +30,6 @@ public class DetailViewManager : ViewManager
     [SerializeField] InputField phoneNumberInputField;
     [SerializeField] InputField emailInputField;
     [SerializeField] Button saveButton;
-    [SerializeField] GameObject thirdViewPrefab;
 
     public delegate void DetailViewManagerSaveDelegate(Contact contact);
     public DetailViewManagerSaveDelegate saveDelegate;
@@ -109,11 +108,5 @@ public class DetailViewManager : ViewManager
         ToggleEditMode(true);
     }
 
-    public void Next()
-    {
-        ThirdViewManager thirdViewManager = 
-            Instantiate(thirdViewPrefab).GetComponent<ThirdViewManager>();
 
-        mainManager.PresentViewManager(thirdViewManager);
-    }
 }
